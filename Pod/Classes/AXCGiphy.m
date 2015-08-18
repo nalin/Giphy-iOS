@@ -93,12 +93,12 @@ static NSString * kGiphyAPIKey;
 
 + (NSURLRequest *) giphySearchRequestForTerm:(NSString *) term limit:(NSUInteger) limit offset:(NSInteger) offset
 {
-    return [self requestForEndPoint:@"/search" params:@{@"limit": @(limit), @"offset": @(offset), @"q": term}];
+    return [self requestForEndPoint:@"/stickers/search" params:@{@"limit": @(limit), @"offset": @(offset), @"q": term}];
 }
 
 + (NSURLRequest *) giphyTrendingRequestWithLimit:(NSUInteger) limit offset:(NSUInteger) offset
 {
-    return [self requestForEndPoint:@"/trending" params:@{@"limit": @(limit), @"offset": @(offset)}];
+    return [self requestForEndPoint:@"/stickers/trending" params:@{@"limit": @(limit), @"offset": @(offset)}];
 }
 
 + (NSURLRequest *) giphyRequestForGIFWithID:(NSString *) ID
